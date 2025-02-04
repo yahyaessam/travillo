@@ -39,6 +39,20 @@ body {
   min-height: 100vh;
 }
 
+@keyframes pulsate {
+  0% {
+    transform: scale(1);
+    box-shadow: none;
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.25);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: none;
+  }
+}
 .logo {
   height: 3.25rem;
   margin-left: 2rem;
@@ -185,6 +199,86 @@ body {
   text-align: center;
   color: var(--color-grey-light-4);
   padding: 2.5rem;
+}
+
+.gallery {
+  display: flex;
+}
+.gallery__photo {
+  width: 100%;
+  display: block;
+}
+
+.overview {
+  display: flex;
+  align-items: center;
+}
+.overview__heading {
+  font-size: 2.25rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 1.5rem 3rem;
+}
+.overview__review {
+  margin-right: auto;
+}
+.overview__stars {
+  display: flex;
+}
+.overview__icon-star {
+  width: 1.75rem;
+  height: 1.75rem;
+  fill: goldenrod;
+}
+.overview__location {
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+}
+.overview__icon-location {
+  width: 1.75rem;
+  height: 1.75rem;
+  fill: var(--color-primary);
+  margin-right: 0.5rem;
+}
+.overview__rating {
+  padding: 0 2rem;
+  margin-left: 3rem;
+  color: #fff;
+  background-color: var(--color-primary);
+  align-self: stretch;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.overview__rating-average {
+  font-size: 2.25rem;
+  font-weight: 30;
+  margin-bottom: -3px;
+}
+.overview__rating-count {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+.btn-inline {
+  border: none;
+  color: var(--color-primary);
+  font-size: inherit;
+  border-bottom: 1px solid currentColor;
+  display: inline-block;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.btn-inline:hover {
+  color: var(--color-grey-dark-1);
+}
+.btn-inline:focus {
+  outline: none;
+  animation: pulsate 1s infinite;
 }
 
 .containter {
