@@ -243,13 +243,20 @@
     cursor: pointer;
     transition:all .2s;
     
+    & span {
+        margin-left:3px;
+        transition:margin-left .2s ease-in-out;
+    }
     &:hover {
         color:var(--color-grey-dark-1);
+        span {
+            margin-left:.8rem;
+        }
     }
+     
     &:focus {
         outline: none;
         animation: pulsate 1s infinite;
-
     }
 }
 
@@ -306,5 +313,59 @@
             margin-right: -1.15rem;
         }
 
+    }
+}
+
+.review {
+    background-color: #fff;
+    box-shadow:0 2rem 5rem rgba(0,0,0,0.06);
+    padding:3rem;
+    margin-bottom:3.5rem;
+    position:relative;
+    overflow:hidden;
+    &:before {
+        content:"\201C";
+        position:absolute;
+        top:-2.75rem;
+        left:-1rem;
+        line-height:1;
+        font-size:20rem;
+        color:var(--color-grey-light-2);
+        font-family: sans-serif;
+        z-index:1;
+    }
+    &__text {
+        z-index:10;
+        position:relative;
+    }
+    &__user {
+        display:flex;
+        align-items:center;
+        margin-top:2rem;
+    }
+    &__user-box {
+        margin-right: auto;
+        margin-left: 1.5rem;
+    }
+    &__photo {
+        width:4.5rem;
+        height:4.5rem;
+        border-radius:50%;
+    }
+    &__user-name {
+        text-transform:uppercase;
+        font-size: 1.1rem;
+        font-weight:600;
+        margin-bottom: .4rem;
+        
+    }
+    &__user-date {
+        font-size:1rem;
+        color:var(--color-grey-dark-3);
+    }
+    &__rating {
+        font-size:2.2rem;
+        font-weight:300;
+        color:var(--color-primary);
     }
 }
