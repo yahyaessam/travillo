@@ -284,11 +284,23 @@ body {
     padding: 1.25rem 2rem;
   }
 }
+@media only screen and (max-width: 27.18em) {
+  .overview__heading {
+    font-size: 1.5rem;
+    padding: 1.25rem 1.5rem;
+    letter-spacing: 0.8px;
+  }
+}
 .overview__review {
   margin-right: auto;
 }
 .overview__stars {
   display: flex;
+}
+@media only screen and (max-width: 27.18em) {
+  .overview__stars {
+    display: none;
+  }
 }
 .overview__icon-star {
   width: 1.75rem;
